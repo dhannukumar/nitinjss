@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+ <head>
+   <title>Search Contact List</title>
+   <link rel="stylesheet" href="">
+   <style>
+
+     body{
+       background-color: #bbb;
+     }
+     #myInput {
+       background-position: 10px 12px;
+       background-repeat: no-repeat;
+       width: 95.2%;
+       font-size: 16px;
+       padding: 12px 20px 12px 40px;
+       border: 1px solid #ddd;
+       margin-bottom: 12px;
+     }
+
+     #myUL {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+     }
+     #myUL li a:hover:not(.header) {
+       background-color: #eee;
+   }
+
+     #myUL li a {
+       border: 1px solid #ddd;
+       margin-top: -1px;
+       background-color: #f6f6f6;
+       padding: 12px;
+       text-decoration: none;
+       font-size: 18px;
+       color: black;
+       display: block
+     }
+     h1{
+       color: yellow;
+       text-align: center;
+       font-size: 45px;
+     }
+
+   </style>
+ </head>
+
+ <body>
+
+   <h1>My Contact Search</h1>
+   <input type="text" id="myInput" onkeyup="filter(this)" placeholder="Search for names..">
+   <ul id="myUL">
+     <li><a href="#">Ajay</a></li>
+     <li><a href="#">amit</a></li>
+     <li><a href="#">ayan khan</a></li>
+     <li><a href="#">ankit</a></li>
+         <li><a href="#">Ajay</a></li>
+     <li><a href="#">aryan</a></li>
+
+
+     <li><a href="#">Billu</a></li>
+     <li><a href="#">Bobby</a></li>
+     <li><a href="#">Baby</a></li>
+     <li><a href="#">Baljeet</a></li>
+
+     <li><a href="#">chandan</a></li>
+     <li><a href="#">chetan</a></li>
+     <li><a href="#">chetali</a></li>
+
+     <li><a href="#">amir khan</a></li>
+     <li><a href="#">cristiano ronaldo</a></li>
+     <li><a href="#">selena gomej</a></li>
+     <li><a href="#">pitbull</a></li>
+         <li><a href="#">roman reigns</a></li>
+     <li><a href="#">justin biber</a></li>
+
+
+     <li><a href="#">undetaker</a></li>
+     <li><a href="#">viladmir putin</a></li>
+     <li><a href="#">tipu sultan</a></li>
+     <li><a href="#">gucci mane</a></li>
+
+   </ul>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script>
+ function filter(element) {
+      var value = $(element).val();
+      $("#myUL > li").each(function() {
+          if ($(this).text().search(value) > -1) {
+              $(this).show();
+          }
+          else {
+              $(this).hide();
+          }
+      });
+  }
+ </script>
+
+
+ </body>
+</html>
